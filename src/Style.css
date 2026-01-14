@@ -1,0 +1,463 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f8fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0077b6;
+  padding: 15px 40px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-buttons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-buttons a:hover {
+  color: #ffd166;
+}
+
+.login-btn {
+  background: #ffd166;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #ffb703;
+}
+
+/* ✅ Logged-in user profile circle */
+.user-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.user-profile:hover {
+  background-color: #0056b3;
+}
+
+/* Success message styling */
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+
+
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+              center/cover no-repeat;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ffb703;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffd166;
+}
+
+/* ================= SEARCH ================= */
+.search-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.search-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.tour-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.tour-form input,
+.tour-form button {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.tour-form button {
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tour-form button:hover {
+  background: #023e8a;
+}
+
+/* ================= DESTINATIONS ================= */
+.destinations {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.destinations h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow-x: auto; /* scroll if too many */
+  padding-bottom: 10px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 280px;
+  flex: 0 0 auto;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 15px 0 5px;
+  color: #0077b6;
+}
+
+.card p {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+  background: #f0f9ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.newsletter h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 250px;
+}
+
+.newsletter button {
+  background: #0077b6;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #023e8a;
+}
+
+/* ================= LOGIN MODAL ================= */
+.login-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+.login-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  position: relative;
+}
+
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab.active {
+  background: #0077b6;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-content input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #023e8a;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0077b6;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ================= BOOKING PAGE ================= */
+.booking-page {
+  min-height: 100vh;
+  background: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.booking-form-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.booking-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.booking-form button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.booking-form button:hover {
+  background: #023e8a;
+}
+
+.book-btn {
+  background: #ffb703;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #ffd166;
+}
+
+/* ================= BOOKING SUMMARY ================= */
+.booking-summary {
+  min-height: 100vh;
+  background: #f5f8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.summary-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: inline-block;
+  padding: 30px;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+}
